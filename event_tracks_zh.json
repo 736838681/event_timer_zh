@@ -1,0 +1,1939 @@
+{
+  "version": "1.1.7",
+  "hash": "",
+  "categories": [
+    {
+      "name": "节日活动",
+      "tracks": [
+        {
+          "name": "万圣节",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": false,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "疯王说",
+              "offset": 60,
+              "interval": 120,
+              "duration": 10,
+              "color": [
+                0.89,
+                0.259,
+                0.008,
+                1
+              ],
+              "copy_text": "[&BBAEAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "巨龙狂欢节全息奔袭",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": false,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "旅者丘陵",
+              "offset": 0,
+              "interval": 60,
+              "duration": 5,
+              "color": [
+                0.259,
+                0.784,
+                0.843,
+                1
+              ],
+              "copy_text": "[&BH0BAAA=]"
+            },
+            {
+              "name": "掘洞悬崖",
+              "offset": 15,
+              "interval": 60,
+              "duration": 5,
+              "color": [
+                0.259,
+                0.784,
+                0.843,
+                1
+              ],
+              "copy_text": "[&BGMCAAA=]"
+            },
+            {
+              "name": "罗纳通道",
+              "offset": 30,
+              "interval": 60,
+              "duration": 5,
+              "color": [
+                0.259,
+                0.784,
+                0.843,
+                1
+              ],
+              "copy_text": "[&BJkBAAA=]"
+            },
+            {
+              "name": "漂流雪境",
+              "offset": 45,
+              "interval": 60,
+              "duration": 5,
+              "color": [
+                0.259,
+                0.784,
+                0.843,
+                1
+              ],
+              "copy_text": "[&BL4AAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "四风节——迷城峭壁",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": false,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "小船竞速",
+              "offset": 60,
+              "interval": 120,
+              "duration": 10,
+              "color": [
+                0.259,
+                0.784,
+                0.843,
+                1
+              ],
+              "copy_text": "[&BBwHAAA=]"
+            },
+            {
+              "name": "水球活动",
+              "offset": 75,
+              "interval": 120,
+              "duration": 10,
+              "color": [
+                0.259,
+                0.784,
+                0.843,
+                1
+              ],
+              "copy_text": "[&BBwHAAA=]"
+            },
+            {
+              "name": "寻宝",
+              "offset": 90,
+              "interval": 120,
+              "duration": 30,
+              "color": [
+                0.259,
+                0.784,
+                0.843,
+                1
+              ],
+              "copy_text": "[&BBwHAAA=]"
+            },
+            {
+              "name": "飞鱼竞速",
+              "offset": 135,
+              "interval": 120,
+              "duration": 10,
+              "color": [
+                0.259,
+                0.784,
+                0.843,
+                1
+              ],
+              "copy_text": "[&BBwHAAA=]"
+            },
+            {
+              "name": "钓鱼比赛",
+              "offset": 150,
+              "interval": 120,
+              "duration": 10,
+              "color": [
+                0.259,
+                0.784,
+                0.843,
+                1
+              ],
+              "copy_text": "[&BBwHAAA=]"
+            },
+            {
+              "name": "飞行牦牛竞速",
+              "offset": 165,
+              "interval": 120,
+              "duration": 10,
+              "color": [
+                0.259,
+                0.784,
+                0.843,
+                1
+              ],
+              "copy_text": "[&BBwHAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "时间周期",
+      "tracks": [
+        {
+          "name": "泰瑞亚昼夜循环",
+          "timeline_type": "game_time",
+          "base_time_calculator": "tyria_cycle",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "黎明",
+              "offset": 25,
+              "interval": 120,
+              "duration": 5,
+              "color": [
+                0.5,
+                0.7,
+                0.9,
+                1
+              ],
+              "copy_text": ""
+            },
+            {
+              "name": "白昼",
+              "offset": 30,
+              "interval": 120,
+              "duration": 70,
+              "color": [
+                1,
+                0.9,
+                0.3,
+                1
+              ],
+              "copy_text": ""
+            },
+            {
+              "name": "黄昏",
+              "offset": 100,
+              "interval": 120,
+              "duration": 5,
+              "color": [
+                0.9,
+                0.5,
+                0.2,
+                1
+              ],
+              "copy_text": ""
+            },
+            {
+              "name": "夜晚",
+              "offset": 105,
+              "interval": 120,
+              "duration": 40,
+              "color": [
+                0.2,
+                0.2,
+                0.5,
+                1
+              ],
+              "copy_text": ""
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "凯珊昼夜循环",
+          "timeline_type": "game_time",
+          "base_time_calculator": "cantha_cycle",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "黎明",
+              "offset": 35,
+              "interval": 120,
+              "duration": 5,
+              "color": [
+                0.6,
+                0.75,
+                0.95,
+                1
+              ],
+              "copy_text": ""
+            },
+            {
+              "name": "白昼",
+              "offset": 40,
+              "interval": 120,
+              "duration": 55,
+              "color": [
+                1,
+                0.85,
+                0.4,
+                1
+              ],
+              "copy_text": ""
+            },
+            {
+              "name": "黄昏",
+              "offset": 95,
+              "interval": 120,
+              "duration": 5,
+              "color": [
+                0.85,
+                0.4,
+                0.3,
+                1
+              ],
+              "copy_text": ""
+            },
+            {
+              "name": "夜晚",
+              "offset": 100,
+              "interval": 120,
+              "duration": 55,
+              "color": [
+                0.1,
+                0.3,
+                0.35,
+                1
+              ],
+              "copy_text": ""
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "副本",
+      "tracks": [
+        {
+          "name": "动态世界第1季",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "梦魇之塔",
+              "offset": 30,
+              "interval": 120,
+              "duration": 20,
+              "color": [
+                0.5,
+                0.8,
+                0.2,
+                1
+              ],
+              "copy_text": "[&BAkMAAA=] or [&BAQAAAA=]"
+            },
+            {
+              "name": "扭曲提线木偶",
+              "offset": 60,
+              "interval": 120,
+              "duration": 20,
+              "color": [
+                0.6,
+                0.4,
+                0.2,
+                1
+              ],
+              "copy_text": "[&BAkMAAA=]"
+            },
+            {
+              "name": "狮城之战",
+              "offset": 90,
+              "interval": 120,
+              "duration": 20,
+              "color": [
+                0.2,
+                0.4,
+                0.8,
+                1
+              ],
+              "copy_text": "[&BAkMAAA=] or [&BOMAAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "巨龙风暴",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "巨龙风暴",
+              "offset": 0,
+              "interval": 120,
+              "duration": 20,
+              "color": [
+                0.8,
+                0.4,
+                1,
+                1
+              ],
+              "copy_text": "[&BAkMAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "汇流",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "奈奥斯外围",
+              "offset": 90,
+              "interval": 180,
+              "duration": 10,
+              "color": [
+                0.8,
+                0.4,
+                0.9,
+                1
+              ],
+              "copy_text": "[&BB8OAAA=]"
+            },
+            {
+              "name": "巴尔利奥山",
+              "offset": 0,
+              "interval": 180,
+              "duration": 10,
+              "color": [
+                0.9,
+                0.4,
+                0.8,
+                1
+              ],
+              "copy_text": "[&BK4OAAA=]"
+            },
+            {
+              "name": "永恒枢纽",
+              "offset": 60,
+              "interval": 180,
+              "duration": 10,
+              "color": [
+                0.75,
+                0.35,
+                0.85,
+                1
+              ],
+              "copy_text": "[&BDYQAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "核心游戏",
+      "tracks": [
+        {
+          "name": "世界首领",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "泰达·科文顿海军上将",
+              "offset": 0,
+              "interval": 180,
+              "duration": 15,
+              "color": [
+                0.7,
+                0.2,
+                0.2,
+                1
+              ],
+              "copy_text": "[&BKgBAAA=]"
+            },
+            {
+              "name": "斯瓦尼亚萨满首领",
+              "offset": 75,
+              "interval": 120,
+              "duration": 15,
+              "color": [
+                0.4,
+                0.7,
+                0.9,
+                1
+              ],
+              "copy_text": "[&BMIDAAA=]"
+            },
+            {
+              "name": "巨型毁灭者",
+              "offset": 30,
+              "interval": 180,
+              "duration": 15,
+              "color": [
+                0.9,
+                0.4,
+                0.1,
+                1
+              ],
+              "copy_text": "[&BM0CAAA=]"
+            },
+            {
+              "name": "暗影巨兽",
+              "offset": 45,
+              "interval": 120,
+              "duration": 15,
+              "color": [
+                0.4,
+                0.2,
+                0.6,
+                1
+              ],
+              "copy_text": "[&BPcAAAA=]"
+            },
+            {
+              "name": "碎裂巨兽",
+              "offset": 60,
+              "interval": 180,
+              "duration": 15,
+              "color": [
+                0.6,
+                0.3,
+                0.8,
+                1
+              ],
+              "copy_text": "[&BE4DAAA=]"
+            },
+            {
+              "name": "巨型丛林地虫",
+              "offset": 15,
+              "interval": 120,
+              "duration": 15,
+              "color": [
+                0.1,
+                0.5,
+                0.2,
+                1
+              ],
+              "copy_text": "[&BEEFAAA=]"
+            },
+            {
+              "name": "莫迪尔沃尔格斯",
+              "offset": 90,
+              "interval": 180,
+              "duration": 15,
+              "color": [
+                0.6,
+                0.4,
+                0.2,
+                1
+              ],
+              "copy_text": "[&BLAAAAA=]"
+            },
+            {
+              "name": "火焰元素",
+              "offset": 105,
+              "interval": 120,
+              "duration": 15,
+              "color": [
+                1,
+                0.3,
+                0.1,
+                1
+              ],
+              "copy_text": "[&BEcAAAA=]"
+            },
+            {
+              "name": "魔像马克II",
+              "offset": 120,
+              "interval": 180,
+              "duration": 15,
+              "color": [
+                0.3,
+                0.3,
+                0.4,
+                1
+              ],
+              "copy_text": "[&BNQCAAA=]"
+            },
+            {
+              "name": "卓玛之爪",
+              "offset": 150,
+              "interval": 180,
+              "duration": 15,
+              "color": [
+                0.3,
+                0.6,
+                0.8,
+                1
+              ],
+              "copy_text": "[&BHoCAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "高难世界首领",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "卡卡女王",
+              "offset": 180,
+              "duration": 5,
+              "color": [
+                0.3,
+                0.8,
+                0.7,
+                1
+              ],
+              "copy_text": "[&BNUGAAA=]"
+            },
+            {
+              "name": "卡卡女王",
+              "offset": 450,
+              "duration": 5,
+              "color": [
+                0.3,
+                0.8,
+                0.7,
+                1
+              ],
+              "copy_text": "[&BNUGAAA=]"
+            },
+            {
+              "name": "卡卡女王",
+              "offset": 720,
+              "duration": 5,
+              "color": [
+                0.3,
+                0.8,
+                0.7,
+                1
+              ],
+              "copy_text": "[&BNUGAAA=]"
+            },
+            {
+              "name": "卡卡女王",
+              "offset": 900,
+              "duration": 5,
+              "color": [
+                0.3,
+                0.8,
+                0.7,
+                1
+              ],
+              "copy_text": "[&BNUGAAA=]"
+            },
+            {
+              "name": "卡卡女王",
+              "offset": 1200,
+              "duration": 5,
+              "color": [
+                0.3,
+                0.8,
+                0.7,
+                1
+              ],
+              "copy_text": "[&BNUGAAA=]"
+            },
+            {
+              "name": "卡卡女王",
+              "offset": 1380,
+              "duration": 5,
+              "color": [
+                0.3,
+                0.8,
+                0.7,
+                1
+              ],
+              "copy_text": "[&BNUGAAA=]"
+            },
+            {
+              "name": "泰夸特",
+              "offset": 0,
+              "duration": 15,
+              "color": [
+                0.2,
+                0.5,
+                0.6,
+                1
+              ],
+              "copy_text": "[&BNABAAA=]"
+            },
+            {
+              "name": "泰夸特",
+              "offset": 240,
+              "duration": 15,
+              "color": [
+                0.2,
+                0.5,
+                0.6,
+                1
+              ],
+              "copy_text": "[&BNABAAA=]"
+            },
+            {
+              "name": "泰夸特",
+              "offset": 510,
+              "duration": 15,
+              "color": [
+                0.2,
+                0.5,
+                0.6,
+                1
+              ],
+              "copy_text": "[&BNABAAA=]"
+            },
+            {
+              "name": "泰夸特",
+              "offset": 780,
+              "duration": 15,
+              "color": [
+                0.2,
+                0.5,
+                0.6,
+                1
+              ],
+              "copy_text": "[&BNABAAA=]"
+            },
+            {
+              "name": "泰夸特",
+              "offset": 960,
+              "duration": 15,
+              "color": [
+                0.2,
+                0.5,
+                0.6,
+                1
+              ],
+              "copy_text": "[&BNABAAA=]"
+            },
+            {
+              "name": "泰夸特",
+              "offset": 1260,
+              "duration": 15,
+              "color": [
+                0.2,
+                0.5,
+                0.6,
+                1
+              ],
+              "copy_text": "[&BNABAAA=]"
+            },
+            {
+              "name": "三重麻烦",
+              "offset": 60,
+              "duration": 20,
+              "color": [
+                0.2,
+                0.7,
+                0.3,
+                1
+              ],
+              "copy_text": "[&BKoBAAA=]"
+            },
+            {
+              "name": "三重麻烦",
+              "offset": 300,
+              "duration": 20,
+              "color": [
+                0.2,
+                0.7,
+                0.3,
+                1
+              ],
+              "copy_text": "[&BKoBAAA=]"
+            },
+            {
+              "name": "三重麻烦",
+              "offset": 570,
+              "duration": 20,
+              "color": [
+                0.2,
+                0.7,
+                0.3,
+                1
+              ],
+              "copy_text": "[&BKoBAAA=]"
+            },
+            {
+              "name": "三重麻烦",
+              "offset": 840,
+              "duration": 20,
+              "color": [
+                0.2,
+                0.7,
+                0.3,
+                1
+              ],
+              "copy_text": "[&BKoBAAA=]"
+            },
+            {
+              "name": "三重麻烦",
+              "offset": 1020,
+              "duration": 20,
+              "color": [
+                0.2,
+                0.7,
+                0.3,
+                1
+              ],
+              "copy_text": "[&BKoBAAA=]"
+            },
+            {
+              "name": "三重麻烦",
+              "offset": 1320,
+              "duration": 20,
+              "color": [
+                0.2,
+                0.7,
+                0.3,
+                1
+              ],
+              "copy_text": "[&BKoBAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "魔径异常体",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "甘达拉战区",
+              "offset": 80,
+              "interval": 360,
+              "duration": 20,
+              "color": [
+                0.8,
+                0.2,
+                0.8,
+                1
+              ],
+              "copy_text": "[&BOQAAAA=]"
+            },
+            {
+              "name": "林线瀑布",
+              "offset": 200,
+              "interval": 360,
+              "duration": 20,
+              "color": [
+                0.8,
+                0.2,
+                0.8,
+                1
+              ],
+              "copy_text": "[&BEwCAAA=]"
+            },
+            {
+              "name": "钢铁平原",
+              "offset": 320,
+              "interval": 360,
+              "duration": 20,
+              "color": [
+                0.8,
+                0.2,
+                0.8,
+                1
+              ],
+              "copy_text": "[&BOcBAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "觉醒者",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "觉醒者入侵",
+              "offset": 30,
+              "interval": 60,
+              "duration": 15,
+              "color": [
+                0.6,
+                0.4,
+                0.9,
+                1
+              ],
+              "copy_text": "/wiki Defeat the invading Awakened"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "碎层入侵",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "漂流雪境",
+              "offset": 0,
+              "interval": 240,
+              "duration": 15,
+              "color": [
+                0.9,
+                0.4,
+                0.9,
+                1
+              ],
+              "copy_text": "[&BLQAAAA=]"
+            },
+            {
+              "name": "凯席斯山",
+              "offset": 60,
+              "interval": 240,
+              "duration": 15,
+              "color": [
+                0.9,
+                0.4,
+                0.9,
+                1
+              ],
+              "copy_text": "[&BBIAAAA=]"
+            },
+            {
+              "name": "底耶沙高地",
+              "offset": 120,
+              "interval": 240,
+              "duration": 15,
+              "color": [
+                0.9,
+                0.4,
+                0.9,
+                1
+              ],
+              "copy_text": "[&BN0AAAA=]"
+            },
+            {
+              "name": "布里斯班野地",
+              "offset": 180,
+              "interval": 240,
+              "duration": 15,
+              "color": [
+                0.9,
+                0.4,
+                0.9,
+                1
+              ],
+              "copy_text": "[&BHUAAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "动态世界第1季",
+      "tracks": [
+        {
+          "name": "绯红入侵",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "入侵",
+              "offset": 0,
+              "interval": 120,
+              "duration": 15,
+              "color": [
+                0.9,
+                0.2,
+                0.5,
+                1
+              ],
+              "copy_text": "[&BOQAAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "动态世界第2季",
+      "tracks": [
+        {
+          "name": "干涸高地",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "坠毁地点",
+              "offset": 0,
+              "interval": 60,
+              "duration": 40,
+              "color": [
+                0.8,
+                0.6,
+                0.3,
+                1
+              ],
+              "copy_text": "[&BIAHAAA=]"
+            },
+            {
+              "name": "沙尘暴",
+              "offset": 40,
+              "interval": 60,
+              "duration": 20,
+              "color": [
+                0.9,
+                0.5,
+                0.1,
+                1
+              ],
+              "copy_text": "[&BIAHAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "决战迈古玛",
+      "tracks": [
+        {
+          "name": "苍翠边界",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "黑夜与敌人",
+              "offset": 45,
+              "interval": 120,
+              "duration": 24,
+              "color": [
+                0.9,
+                0.5,
+                0.2,
+                1
+              ],
+              "copy_text": "[&BN4HAAA=]"
+            },
+            {
+              "name": "夜间首领",
+              "offset": 69,
+              "interval": 120,
+              "duration": 21,
+              "color": [
+                0.8,
+                0.1,
+                0.1,
+                1
+              ],
+              "copy_text": "[&BAgIAAA=]"
+            },
+            {
+              "name": "保卫苍翠边界",
+              "offset": 90,
+              "interval": 120,
+              "duration": 75,
+              "color": [
+                0.2,
+                0.7,
+                0.3,
+                1
+              ],
+              "copy_text": "[&BN4HAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "赤金盆地",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "塔瑞尔之战",
+              "offset": 0,
+              "interval": 120,
+              "duration": 20,
+              "color": [
+                1,
+                0.8,
+                0,
+                1
+              ],
+              "copy_text": "[&BGwIAAA=], [&BN0HAAA=], [&BAYIAAA=], [&BAIIAAA=]"
+            },
+            {
+              "name": "保卫塔瑞尔",
+              "offset": 30,
+              "interval": 120,
+              "duration": 75,
+              "color": [
+                0.4,
+                0.7,
+                0.9,
+                1
+              ],
+              "copy_text": "[&BGwIAAA=]"
+            },
+            {
+              "name": "烈火试炼",
+              "offset": 105,
+              "interval": 120,
+              "duration": 15,
+              "color": [
+                1,
+                0.4,
+                0.1,
+                1
+              ],
+              "copy_text": "[&BGwIAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "缠藤深渊",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "丛林之王",
+              "offset": 90,
+              "interval": 120,
+              "duration": 20,
+              "color": [
+                0.7,
+                0.3,
+                0.9,
+                1
+              ],
+              "copy_text": "[&BPUHAAA=]"
+            },
+            {
+              "name": "前哨站",
+              "offset": 110,
+              "interval": 120,
+              "duration": 100,
+              "color": [
+                0.6,
+                0.4,
+                0.2,
+                1
+              ],
+              "copy_text": "[&BMwHAAA=], [&BAwIAAA=], [&BAMIAAA=] or [&BAAIAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "巨龙阵地",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "进攻枯萎高塔",
+              "offset": 30,
+              "interval": 120,
+              "duration": 120,
+              "color": [
+                0.5,
+                0.2,
+                0.7,
+                1
+              ],
+              "copy_text": "[&BBAIAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "动态世界第3季",
+      "tracks": [
+        {
+          "name": "多里克湖",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "赛德拉避难所",
+              "offset": 0,
+              "interval": 120,
+              "duration": 45,
+              "color": [
+                0.8,
+                0.1,
+                0.2,
+                1
+              ],
+              "copy_text": "[&BK0JAAA=]"
+            },
+            {
+              "name": "新洛姆赫斯特",
+              "offset": 45,
+              "interval": 120,
+              "duration": 45,
+              "color": [
+                0.9,
+                0.2,
+                0.3,
+                1
+              ],
+              "copy_text": "[&BLQJAAA=]"
+            },
+            {
+              "name": "诺兰家园",
+              "offset": 90,
+              "interval": 120,
+              "duration": 30,
+              "color": [
+                0.7,
+                0.1,
+                0.1,
+                1
+              ],
+              "copy_text": "[&BK8JAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "烈焰征途",
+      "tracks": [
+        {
+          "name": "水晶绿洲",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "赌场闪击",
+              "offset": 65,
+              "interval": 120,
+              "duration": 15,
+              "color": [
+                0.2,
+                0.7,
+                0.9,
+                1
+              ],
+              "copy_text": "[&BLsKAAA=]"
+            },
+            {
+              "name": "卓加皮纳塔",
+              "offset": 81,
+              "interval": 120,
+              "duration": 2,
+              "color": [
+                1,
+                0.8,
+                0,
+                1
+              ],
+              "copy_text": "[&BLsKAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "沙漠高地",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "埋藏宝藏",
+              "offset": 0,
+              "interval": 120,
+              "duration": 20,
+              "color": [
+                0.9,
+                0.7,
+                0.4,
+                1
+              ],
+              "copy_text": "[&BGsKAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "伊伦河湾",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "晋升之路",
+              "offset": 30,
+              "interval": 120,
+              "duration": 25,
+              "color": [
+                0.4,
+                0.8,
+                0.5,
+                1
+              ],
+              "copy_text": "[&BFMKAAA=]"
+            },
+            {
+              "name": "分身",
+              "offset": 55,
+              "interval": 120,
+              "duration": 10,
+              "color": [
+                0.7,
+                0.4,
+                0.9,
+                1
+              ],
+              "copy_text": "[&BFMKAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "荒芜之地",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "折磨之喉",
+              "offset": 0,
+              "interval": 120,
+              "duration": 20,
+              "color": [
+                0.8,
+                0.8,
+                0.2,
+                1
+              ],
+              "copy_text": "[&BKMKAAA=]"
+            },
+            {
+              "name": "巨鳄崛起",
+              "offset": 30,
+              "interval": 60,
+              "duration": 20,
+              "color": [
+                0.7,
+                0.5,
+                0.2,
+                1
+              ],
+              "copy_text": "[&BMEKAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "瓦比领域",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "烈焰铸造",
+              "offset": 0,
+              "interval": 60,
+              "duration": 20,
+              "color": [
+                1,
+                0.4,
+                0,
+                1
+              ],
+              "copy_text": "[&BO0KAAA=]"
+            },
+            {
+              "name": "蛇妖之怒",
+              "offset": 90,
+              "interval": 120,
+              "duration": 30,
+              "color": [
+                0.9,
+                0.6,
+                0.2,
+                1
+              ],
+              "copy_text": "[&BHQKAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "动态世界第4季",
+      "tracks": [
+        {
+          "name": "伊斯坦领域",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "帕拉瓦丹",
+              "offset": 45,
+              "interval": 120,
+              "duration": 30,
+              "color": [
+                0.8,
+                0.5,
+                0.2,
+                1
+              ],
+              "copy_text": "[&BAkLAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "亚哈悬崖",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "危险猎物",
+              "offset": 0,
+              "interval": 120,
+              "duration": 10,
+              "color": [
+                0.7,
+                0.7,
+                0.5,
+                1
+              ],
+              "copy_text": "[&BIMLAAA=]"
+            },
+            {
+              "name": "烙印碎裂巨兽",
+              "offset": 15,
+              "interval": 120,
+              "duration": 15,
+              "color": [
+                0.8,
+                0.5,
+                1,
+                1
+              ],
+              "copy_text": "[&BJMLAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "雷云高峰",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "雷云要塞",
+              "offset": 45,
+              "interval": 120,
+              "duration": 20,
+              "color": [
+                0.6,
+                0.6,
+                0.7,
+                1
+              ],
+              "copy_text": "[&BLsLAAA=]"
+            },
+            {
+              "name": "浮油群岛",
+              "offset": 105,
+              "interval": 120,
+              "duration": 20,
+              "color": [
+                0.2,
+                0.2,
+                0.2,
+                1
+              ],
+              "copy_text": "[&BKYLAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "冰巢传说",
+      "tracks": [
+        {
+          "name": "戈瑟玛山谷",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "软泥怪坑试炼",
+              "offset": 5,
+              "interval": 120,
+              "duration": 15,
+              "color": [
+                0.4,
+                0.8,
+                0.3,
+                1
+              ],
+              "copy_text": "[&BPgLAAA=]"
+            },
+            {
+              "name": "时代演唱会",
+              "offset": 40,
+              "interval": 120,
+              "duration": 15,
+              "color": [
+                1,
+                0.3,
+                0.1,
+                1
+              ],
+              "copy_text": "[&BPgLAAA=]"
+            },
+            {
+              "name": "圣火仪式",
+              "offset": 70,
+              "interval": 120,
+              "duration": 15,
+              "color": [
+                1,
+                0.6,
+                0.1,
+                1
+              ],
+              "copy_text": "[&BA4MAAA=]"
+            },
+            {
+              "name": "厄运传说神殿闹鬼事件",
+              "offset": 98,
+              "interval": 120,
+              "duration": 17,
+              "color": [
+                0.3,
+                0.8,
+                0.7,
+                1
+              ],
+              "copy_text": "[&BA4MAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "波卓拉边境",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "冰龙勇士",
+              "offset": 5,
+              "interval": 120,
+              "duration": 35,
+              "color": [
+                0.4,
+                0.6,
+                1,
+                1
+              ],
+              "copy_text": "[&BDkMAAA=]"
+            },
+            {
+              "name": "冬日风暴",
+              "offset": 45,
+              "interval": 120,
+              "duration": 35,
+              "color": [
+                0.7,
+                0.8,
+                1,
+                1
+              ],
+              "copy_text": "[&BCcMAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "巨龙绝境",
+      "tracks": [
+        {
+          "name": "亭石",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "以太之刃突袭",
+              "offset": 30,
+              "interval": 120,
+              "duration": 30,
+              "color": [
+                0.3,
+                0.7,
+                0.7,
+                1
+              ],
+              "copy_text": "[&BGUNAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "新凯宁城",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "凯宁停电",
+              "offset": 60,
+              "interval": 120,
+              "duration": 40,
+              "color": [
+                0.9,
+                0.2,
+                0.7,
+                1
+              ],
+              "copy_text": "[&BBkNAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "科瓦德荒野",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "阿斯彭伍德",
+              "offset": 40,
+              "interval": 120,
+              "duration": 20,
+              "color": [
+                0.3,
+                0.5,
+                0.4,
+                1
+              ],
+              "copy_text": "[&BPkMAAA=]"
+            },
+            {
+              "name": "科瓦德帮派战争",
+              "offset": 90,
+              "interval": 120,
+              "duration": 30,
+              "color": [
+                0.1,
+                0.6,
+                0.5,
+                1
+              ],
+              "copy_text": "[&BMwMAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "巨龙尽头",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "翠玉海之战",
+              "offset": 0,
+              "interval": 120,
+              "duration": 60,
+              "color": [
+                0.2,
+                0.8,
+                0.6,
+                1
+              ],
+              "copy_text": "[&BKIMAAA=]"
+            },
+            {
+              "name": "翠玉巨口",
+              "offset": 65,
+              "interval": 120,
+              "duration": 8,
+              "color": [
+                0.1,
+                0.5,
+                0.3,
+                1
+              ],
+              "copy_text": "[&BKIMAAA=]"
+            },
+            {
+              "name": "翠玉巨口",
+              "offset": 105,
+              "interval": 120,
+              "duration": 8,
+              "color": [
+                0.1,
+                0.5,
+                0.3,
+                1
+              ],
+              "copy_text": "[&BKIMAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "天界之谜",
+      "tracks": [
+        {
+          "name": "天界瞭望群岛",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "解锁巫师之塔",
+              "offset": 0,
+              "interval": 120,
+              "duration": 25,
+              "color": [
+                0.7,
+                0.7,
+                1,
+                1
+              ],
+              "copy_text": "[&BL4NAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "阿姆尼塔斯",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "阿姆尼塔斯保卫战",
+              "offset": 60,
+              "interval": 120,
+              "duration": 30,
+              "color": [
+                1,
+                0.8,
+                0.5,
+                1
+              ],
+              "copy_text": "[&BDQOAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "珍瑟荒野",
+      "tracks": [
+        {
+          "name": "珍瑟新萃",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "迷雾与怪物",
+              "offset": 90,
+              "interval": 120,
+              "duration": 25,
+              "color": [
+                0.5,
+                0.7,
+                0.7,
+                1
+              ],
+              "copy_text": "[&BCoPAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "巴瓦尼索斯",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "泰坦航程",
+              "offset": 20,
+              "interval": 120,
+              "duration": 30,
+              "color": [
+                0.2,
+                0.4,
+                0.8,
+                1
+              ],
+              "copy_text": "[&BGEPAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "永恒幻景",
+      "tracks": [
+        {
+          "name": "船难海岸",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "锤心大乱斗！",
+              "offset": 100,
+              "interval": 120,
+              "duration": 15,
+              "color": [
+                0.95,
+                0.35,
+                0.15,
+                1
+              ],
+              "copy_text": "[&BJEPAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "星光林地",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "林地秘事",
+              "offset": 45,
+              "interval": 120,
+              "duration": 20,
+              "color": [
+                0.6,
+                0.3,
+                0.9,
+                1
+              ],
+              "copy_text": "[&BJ4PAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "远古花园",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "远古枷锁",
+              "offset": 1095,
+              "interval": 120,
+              "duration": 25,
+              "color": [
+                0.18,
+                0.78,
+                0.36,
+                1
+              ],
+              "copy_text": "[&BPwPAAA=]"
+            }
+          ],
+          "events": []
+        },
+        {
+          "name": "魔泉空洞",
+          "timeline_type": "real_time",
+          "base_time_calculator": "local_day_start",
+          "visible": true,
+          "height": 20,
+          "schedules": [
+            {
+              "name": "残酷深渊",
+              "offset": 120,
+              "interval": 180,
+              "duration": 30,
+              "color": [
+                0.95,
+                0.49,
+                0.33,
+                1
+              ],
+              "copy_text": "[&BDYQAAA=]"
+            }
+          ],
+          "events": []
+        }
+      ]
+    }
+  ]
+}
