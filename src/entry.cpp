@@ -179,7 +179,7 @@ static bool PushChineseFont()
 
     ImFont* font = static_cast<ImFont*>(g_NexusLink->FontUI);
 
-    ImGui::PushFont(font, 0.0f);
+    ImGui::PushFont(font);
     return true;
 }
 
@@ -348,24 +348,34 @@ static void RenderOptions() {
     if (pushed) ImGui::PopFont();
 }
 
-static void AddonLoad(AddonAPI_t* api) {
+static void AddonLoad(AddonAPI_t* api)
+{
     g_API = api;
-    ImGui::SetCurrentContext(reinterpret_cast<ImGuiContext*>(g_API->ImguiContext));
+
+    ImGui::SetCurrentContext(
+        static_cast<ImGuiContext*>(g_API->ImguiContext)
+    );
+
     ImGui::SetAllocatorFunctions(
         reinterpret_cast<void* (*)(size_t, void*)>(g_API->ImguiMalloc),
-        reinterpret_cast<void (*)(void*, void*)>(g_API->ImguiFree));
-     g_NexusLink = static_cast<NexusLinkData_t*>(
+        reinterpret_cast<void (*)(void*, void*)>(g_API->ImguiFree)
+    );
+
+    g_NexusLink = static_cast<NexusLinkData_t*>(
         g_API->DataLink_Get(DL_NEXUS_LINK)
-     );
+    );
+
     g_API->GUI_Register(RT_Render, RenderMainWindow);
     g_API->GUI_Register(RT_OptionsRender, RenderOptions);
 }
 
-static void AddonUnload() {
+static void AddonUnload()
+{
     if (g_API) {
         g_API->GUI_Deregister(RenderMainWindow);
         g_API->GUI_Deregister(RenderOptions);
     }
+
     g_NexusLink = nullptr;
     g_API = nullptr;
 }

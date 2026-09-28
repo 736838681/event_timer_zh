@@ -17,8 +17,8 @@ FetchContent_MakeAvailable(nexus_api)
 
 FetchContent_Declare(
     imgui
-    GIT_REPOSITORY https://github.com/RaidcoreGG/imgui19270.git
-    GIT_TAG master
+    GIT_REPOSITORY https://github.com/RaidcoreGG/imgui18000.git
+    GIT_TAG 58075c4414b985b352d10718b02a8c43f25efd7c
 )
 FetchContent_MakeAvailable(imgui)
 
