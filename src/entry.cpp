@@ -20,12 +20,10 @@
 #include <vector>
 
 #include "events_generated.h"
-#include "glyph_ranges_generated.h"
 
 static AddonAPI_t* g_API = nullptr;
 static AddonDefinition_t g_AddonDef{};
 static std::atomic<ImFont*> g_ChineseFont{nullptr};
-static ImFontConfig g_ChineseFontConfig{};
 static std::string g_FontPathUtf8;
 static bool g_ShowWindow = true;
 static bool g_ShowCategoryHeaders = false;
@@ -183,22 +181,23 @@ static void OnChineseFontReceived(const char*, void* font) {
 }
 
 static void LoadChineseFont() {
-    if (!g_API || !g_API->Fonts_AddFromFile) return;
-    const auto path = ChineseFontPath();
-    if (!std::filesystem::exists(path)) return;
+    if (!g_API || !g_API->Fonts_AddFromFile)
+        return;
 
-    g_ChineseFontConfig = ImFontConfig();
-    g_ChineseFontConfig.OversampleH = 1;
-    g_ChineseFontConfig.OversampleV = 1;
-    g_ChineseFontConfig.GlyphRanges = kChineseTimerGlyphRanges;
+    const auto path = ChineseFontPath();
+
+    if (!std::filesystem::exists(path))
+        return;
 
     g_FontPathUtf8 = path.u8string();
+
     g_API->Fonts_AddFromFile(
         "EventTimerCN_Sarasa",
         18.0f,
         g_FontPathUtf8.c_str(),
         OnChineseFontReceived,
-        &g_ChineseFontConfig);
+        nullptr
+    );
 }
 
 static bool PushChineseFont() {
