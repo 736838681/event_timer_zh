@@ -202,8 +202,10 @@ static void LoadChineseFont() {
 
 static bool PushChineseFont() {
     ImFont* font = g_ChineseFont.load(std::memory_order_acquire);
-    if (!font) return false;
-    ImGui::PushFont(font);
+    if (!font)
+        return false;
+
+    ImGui::PushFont(font, 18.0f);
     return true;
 }
 
