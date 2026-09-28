@@ -276,8 +276,11 @@ static void RenderMainWindow() {
 
     ImGui::SetNextWindowSize(ImVec2(920.0f, 720.0f), ImGuiCond_FirstUseEver);
     if (ImGui::Begin("事件计时器###EventTimerCN", &g_ShowWindow)) {
-        if (!g_ChineseFont.load(std::memory_order_acquire)) {
-            ImGui::TextColored(ImVec4(1.0f,0.45f,0.3f,1.0f), "未加载中文字体：请确认 addons/Nexus/Fonts/SarasaUiSC-Regular.ttf 已存在，然后重新加载插件。");
+        if (!g_NexusLink || !g_NexusLink->FontUI) {
+            ImGui::TextColored(
+                ImVec4(1.0f, 0.45f, 0.3f, 1.0f),
+                "未获取到 Nexus UI 字体。"
+            );
             ImGui::Separator();
         }
 
@@ -363,7 +366,7 @@ static void AddonUnload() {
         g_API->GUI_Deregister(RenderMainWindow);
         g_API->GUI_Deregister(RenderOptions);
     }
-    g_ChineseFont.store(nullptr, std::memory_order_release);
+    g_NexusLink = nullptr;
     g_API = nullptr;
 }
 
