@@ -3,14 +3,14 @@
 #include <imgui.h>
 
 #include <algorithm>
-#include <atomic>
+
 #include <chrono>
 #include <cmath>
 #include <cstdint>
 #include <cstdio>
 #include <cstring>
 #include <ctime>
-#include <filesystem>
+
 #include <iterator>
 #include <map>
 #include <string>
@@ -23,14 +23,16 @@
 
 static AddonAPI_t* g_API = nullptr;
 static AddonDefinition_t g_AddonDef{};
-static std::atomic<ImFont*> g_ChineseFont{nullptr};
-static std::string g_FontPathUtf8;
+
+
 static bool g_ShowWindow = true;
 static bool g_ShowCategoryHeaders = false;
 static bool g_ShowTrackLabels = false;
 static bool g_ShowHiddenTracks = false;
 static int g_RangeIndex = 1; // 4h
 static float g_CurrentPosition = 0.5f;
+
+static NexusLinkData_t* g_NexusLink = nullptr;
 
 struct Occurrence {
     int track_index = 0;
@@ -165,47 +167,19 @@ static ImU32 TextColorFor(float r, float g, float b) {
     return lum > 0.58f ? IM_COL32(25, 25, 25, 255) : IM_COL32(245, 245, 245, 255);
 }
 
-static std::filesystem::path GameRoot() {
-    wchar_t buffer[4096]{};
-    const DWORD len = GetModuleFileNameW(nullptr, buffer, static_cast<DWORD>(std::size(buffer)));
-    if (len == 0 || len >= std::size(buffer)) return {};
-    return std::filesystem::path(buffer).parent_path();
-}
 
-static std::filesystem::path ChineseFontPath() {
-    return GameRoot() / L"addons" / L"Nexus" / L"Fonts" / L"SarasaUiSC-Regular.ttf";
-}
 
-static void OnChineseFontReceived(const char*, void* font) {
-    g_ChineseFont.store(reinterpret_cast<ImFont*>(font), std::memory_order_release);
-}
 
-static void LoadChineseFont() {
-    if (!g_API || !g_API->Fonts_AddFromFile)
-        return;
 
-    const auto path = ChineseFontPath();
 
-    if (!std::filesystem::exists(path))
-        return;
-
-    g_FontPathUtf8 = path.u8string();
-
-    g_API->Fonts_AddFromFile(
-        "EventTimerCN_Sarasa",
-        18.0f,
-        g_FontPathUtf8.c_str(),
-        OnChineseFontReceived,
-        nullptr
-    );
-}
-
-static bool PushChineseFont() {
-    ImFont* font = g_ChineseFont.load(std::memory_order_acquire);
-    if (!font)
+static bool PushChineseFont()
+{
+    if (!g_NexusLink || !g_NexusLink->FontUI)
         return false;
 
-    ImGui::PushFont(font, 18.0f);
+    ImFont* font = static_cast<ImFont*>(g_NexusLink->FontUI);
+
+    ImGui::PushFont(font, 0.0f);
     return true;
 }
 
@@ -377,7 +351,9 @@ static void AddonLoad(AddonAPI_t* api) {
     ImGui::SetAllocatorFunctions(
         reinterpret_cast<void* (*)(size_t, void*)>(g_API->ImguiMalloc),
         reinterpret_cast<void (*)(void*, void*)>(g_API->ImguiFree));
-    LoadChineseFont();
+     g_NexusLink = static_cast<NexusLinkData_t*>(
+        g_API->DataLink_Get(DL_NEXUS_LINK)
+     );
     g_API->GUI_Register(RT_Render, RenderMainWindow);
     g_API->GUI_Register(RT_OptionsRender, RenderOptions);
 }
@@ -386,8 +362,6 @@ static void AddonUnload() {
     if (g_API) {
         g_API->GUI_Deregister(RenderMainWindow);
         g_API->GUI_Deregister(RenderOptions);
-        if (g_API->Fonts_Release)
-            g_API->Fonts_Release("EventTimerCN_Sarasa", OnChineseFontReceived);
     }
     g_ChineseFont.store(nullptr, std::memory_order_release);
     g_API = nullptr;
