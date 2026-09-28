@@ -344,7 +344,10 @@ static void RenderOptions() {
     const bool pushed = PushChineseFont();
     ImGui::TextUnformatted("事件计时器（中文）");
     ImGui::Checkbox("显示主窗口", &g_ShowWindow);
-    ImGui::TextWrapped("界面按 Event Timers 的时间轴样式重做：顶部时间刻度、横向彩色事件条、红色当前时间线。数据内置自中文 event_tracks。\n中文字体固定读取：addons/Nexus/Fonts/SarasaUiSC-Regular.ttf");
+    ImGui::TextWrapped(
+    "界面按 Event Timers 的时间轴样式重做。"
+    "中文字体使用 Nexus 当前设置的 UI 字体。"
+    );
     if (pushed) ImGui::PopFont();
 }
 
