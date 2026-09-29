@@ -592,7 +592,7 @@ static void RenderMainWindow() {
 
             GenerateOccurrences(kEventSchedules[i], now, windowStart, windowEnd, occs);
 
-        std::sort(occs.begin(), occs.end(), []\(const Occurrence& a, const Occurrence& b) { return a.start < b.start; });
+        std::sort(occs.begin(), occs.end(), [](const Occurrence& a, const Occurrence& b) { return a.start < b.start; });
 
 
 
