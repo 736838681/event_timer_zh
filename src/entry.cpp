@@ -4,10 +4,6 @@
 
 #include <imgui.h>
 
-#include <atomic>
-#include <filesystem>
-
-
 
 #include <algorithm>
 
@@ -69,10 +65,7 @@ static float g_CurrentPosition = 0.5f;
 
 
 
-static std::atomic<ImFont*> g_ChineseFont{nullptr};
-static ImFontConfig g_ChineseFontConfig{};
-static ImVector<ImWchar> g_ChineseGlyphRanges;
-static std::string g_ChineseFontPath;
+static NexusLinkData_t* g_NexusLink = nullptr;
 
 
 
@@ -352,74 +345,12 @@ static ImU32 TextColorFor(float r, float g, float b) {
 
 
 
-static void OnChineseFontReceived(const char*, void* font)
+static bool PushNexusUIFont()
 {
-    g_ChineseFont.store(static_cast<ImFont*>(font), std::memory_order_release);
-}
-
-static std::filesystem::path GameRoot()
-{
-    wchar_t buffer[MAX_PATH]{};
-    const DWORD len = GetModuleFileNameW(nullptr, buffer, MAX_PATH);
-    if (len == 0 || len >= MAX_PATH)
-        return {};
-    return std::filesystem::path(buffer).parent_path();
-}
-
-static void BuildChineseGlyphRanges()
-{
-    ImFontGlyphRangesBuilder builder;
-    builder.AddRanges(ImGui::GetIO().Fonts->GetGlyphRangesDefault());
-
-    // UI text used by this addon.
-    builder.AddText(u8"事件计时器显示范围分类标题轨道名称显示隐藏轨道未加载中文字体进行中剩余距离开始小时分钟当前时间界面按时间轴样式重做顶部时间刻度横向彩色事件条红色当前时间线数据内置自中文字体");
-
-    // Event data: add every character actually used by the generated schedule.
-    for (std::size_t i = 0; i < kEventScheduleCount; ++i) {
-        const auto& e = kEventSchedules[i];
-        if (e.name)     builder.AddText(e.name);
-        if (e.category) builder.AddText(e.category);
-        if (e.track)    builder.AddText(e.track);
-    }
-
-    g_ChineseGlyphRanges.clear();
-    builder.BuildRanges(&g_ChineseGlyphRanges);
-}
-
-static void LoadChineseFont()
-{
-    if (!g_API || !g_API->Fonts_AddFromFile)
-        return;
-
-    const auto fontPath = GameRoot() / L"addons" / L"Nexus" / L"Fonts" / L"SarasaUiSC-Regular.ttf";
-    if (!std::filesystem::exists(fontPath))
-        return;
-
-    BuildChineseGlyphRanges();
-
-    g_ChineseFontConfig = ImFontConfig();
-    g_ChineseFontConfig.OversampleH = 1;
-    g_ChineseFontConfig.OversampleV = 1;
-    g_ChineseFontConfig.GlyphRanges = g_ChineseGlyphRanges.Data;
-
-    g_ChineseFontPath = fontPath.u8string();
-
-    g_API->Fonts_AddFromFile(
-        "EventTimerCN_Sarasa",
-        18.0f,
-        g_ChineseFontPath.c_str(),
-        OnChineseFontReceived,
-        &g_ChineseFontConfig
-    );
-}
-
-static bool PushChineseFont()
-{
-    ImFont* font = g_ChineseFont.load(std::memory_order_acquire);
-    if (!font)
+    if (!g_NexusLink || !g_NexusLink->FontUI)
         return false;
 
-    ImGui::PushFont(font);
+    ImGui::PushFont(static_cast<ImFont*>(g_NexusLink->FontUI));
     return true;
 }
 
@@ -601,7 +532,7 @@ static void RenderMainWindow() {
 
     if (!g_ShowWindow) return;
 
-    const bool pushed = PushChineseFont();
+    const bool pushed = PushNexusUIFont();
 
 
 
@@ -609,10 +540,10 @@ static void RenderMainWindow() {
 
     if (ImGui::Begin("事件计时器###EventTimerCN", &g_ShowWindow)) {
 
-        if (!g_ChineseFont.load(std::memory_order_acquire)) {
+        if (!g_NexusLink || !g_NexusLink->FontUI) {
             ImGui::TextColored(
                 ImVec4(1.0f, 0.45f, 0.3f, 1.0f),
-                "未加载中文字体：请确认 addons/Nexus/Fonts/SarasaUiSC-Regular.ttf 已存在。"
+                "未获取到 Nexus UI 字体。请先在 Nexus 中选择可显示中文的 Font.ttf。"
             );
             ImGui::Separator();
         }
@@ -733,13 +664,13 @@ static void RenderMainWindow() {
 
 static void RenderOptions() {
 
-    const bool pushed = PushChineseFont();
+    const bool pushed = PushNexusUIFont();
 
     ImGui::TextUnformatted("事件计时器（中文）");
 
     ImGui::Checkbox("显示主窗口", &g_ShowWindow);
 
-    ImGui::TextWrapped("界面按 Event Timers 的时间轴样式重做：顶部时间刻度、横向彩色事件条、红色当前时间线。\n中文字体：SarasaUiSC-Regular.ttf（插件独立加载）。");
+    ImGui::TextWrapped("界面按 Event Timers 的时间轴样式重做：顶部时间刻度、横向彩色事件条、红色当前时间线。\n字体直接使用 Nexus 的 FontUI；请在 Nexus 设置中选择可显示中文的 Font.ttf。");
 
     if (pushed) ImGui::PopFont();
 
@@ -771,7 +702,10 @@ static void AddonLoad(AddonAPI_t* api)
 
     );
 
-    LoadChineseFont();
+    g_NexusLink = static_cast<NexusLinkData_t*>(
+        g_API->DataLink_Get(DL_NEXUS_LINK)
+    );
+
 
     g_API->GUI_Register(RT_Render, RenderMainWindow);
 
@@ -795,7 +729,7 @@ static void AddonUnload()
 
 
 
-    g_ChineseFont.store(nullptr, std::memory_order_release);
+    g_NexusLink = nullptr;
     g_API = nullptr;
 
 }
@@ -824,7 +758,7 @@ extern "C" __declspec(dllexport) AddonDefinition_t* GetAddonDef() {
 
     g_AddonDef.Author = "736838681";
 
-    g_AddonDef.Description = "Chinese GW2 Event Timers-style timeline for Nexus with dedicated Sarasa UI font.";
+    g_AddonDef.Description = "Chinese GW2 Event Timers-style timeline for Nexus using Nexus FontUI.";
 
     g_AddonDef.Load = AddonLoad;
 
